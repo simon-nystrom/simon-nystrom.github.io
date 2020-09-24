@@ -15,6 +15,13 @@
     margin-right: 0;
     color: #83a0e1;
   }
+
+  @media screen and (max-width: 992px) {
+    hr {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
 </style>
 
 <hr class={fullWidth ? 'full' : null} />

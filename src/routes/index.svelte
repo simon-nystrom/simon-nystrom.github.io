@@ -18,6 +18,7 @@
   p {
     font-weight: 300;
     font-size: 1.1em;
+    /* text-align: justify; */
   }
   .intro2 {
     margin-bottom: 30px;
