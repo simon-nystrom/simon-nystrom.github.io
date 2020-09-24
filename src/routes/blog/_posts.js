@@ -99,13 +99,16 @@ marked.setOptions({
 
 const postFiles = fs.readdirSync("posts")
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const posts = [];
 const categories = ["category"];
 for (let i = 0; i < postFiles.length; i++) {
 	const postContent = fs.readFileSync(`posts/${postFiles[i]}`, { encoding: 'utf-8' });
 	const { body, ...frontMatter } = fm(postContent);
 	const { attributes } = frontMatter;
-	const { slug, title, categories, tags, date } = attributes;
+	const { slug, title, categories, tags, date, isDraft } = attributes;
+	if (isDraft && !isDev) continue;
 	posts.push({
 		html: marked(body),
 		date,

@@ -1,41 +1,11 @@
 <script>
+  import H3 from "../design/headers/H3.svelte";
   import BlogLink from "./BlogLink.svelte";
 
   export let posts;
 </script>
 
-<style>
-  .container {
-    margin-top: 2em;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-  }
-
-  .inline-divide {
-    border-bottom: 1px solid #262e40;
-    margin-left: 0.6em;
-    margin-right: 30px;
-    flex: 1;
-    margin-top: 4px;
-  }
-
-  h3 {
-    letter-spacing: 0.1rem;
-  }
-
-  @media screen and (max-width: 992px) {
-    .inline-divide {
-      /* margin-left: 1em; */
-      margin-right: 0;
-    }
-  }
-</style>
-
-<div class="container">
-  <h3>Recent posts</h3>
-  <div class="inline-divide" />
-</div>
+<H3 text="Recent" />
 
 {#each posts as post}
   <BlogLink

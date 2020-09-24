@@ -14,6 +14,8 @@
 </script>
 
 <script>
+  import Tag from "../../components/design/tag/Tag.svelte";
+
   export let post;
 </script>
 
@@ -31,25 +33,39 @@
     font-weight: 500;
   }
 
+  .content :global(hr) {
+    color: #262e40;
+    margin: 30px;
+  }
+
   .content :global(pre) {
-    /* background-color: #f9f9f9; */
     box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
     padding: 0.5em;
-    border-radius: 2px;
+    border-radius: 4px;
     overflow-x: auto;
   }
 
   .content :global(pre) :global(code) {
-    /* background-color: transparent; */
     padding: 0;
   }
 
-  .content :global(ul) {
-    line-height: 1.5;
+  .tags {
+    display: flex;
   }
 
-  .content :global(li) {
-    margin: 0 0 0.5em 0;
+  .meta {
+    padding: 0.8em;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .gray {
+    color: #85858c;
+  }
+
+  h1 {
+    font-size: 2.4em;
   }
 </style>
 
@@ -58,7 +74,15 @@
 </svelte:head>
 
 <h1>{post.title}</h1>
-
+<div class="meta">
+  <h5 class="gray">{post.date}</h5>
+  <div class="gray">・</div>
+  <div class="tags">
+    {#each post.tags as tag}
+      <Tag title={tag} />
+    {/each}
+  </div>
+</div>
 <div class="content">
   {@html post.html}
 </div>

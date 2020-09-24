@@ -1,6 +1,6 @@
 <script>
   import Divider from "../design/Divider.svelte";
-  import Tag from "../design/Tag.svelte";
+  import Tag from "../design/tag/Tag.svelte";
 
   export let href;
   export let title;
@@ -58,9 +58,12 @@
   <h4>{title}</h4>
   <div class="meta">
     <div class="tags">
-      {#each tags as tag}
+      {#each tags.filter((_, i) => i < 2) as tag}
         <Tag title={tag} />
       {/each}
+      {#if tags.length > 2}
+        <Tag title="..." />
+      {/if}
     </div>
     <p class="date">{date}</p>
   </div>
