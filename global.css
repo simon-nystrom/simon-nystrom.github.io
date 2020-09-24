@@ -1,8 +1,17 @@
+html, body {
+	height:100%;
+}
+
+#sapper {
+	min-height: 100%;
+	position: relative;
+}
+
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 1.6;
 	color: white;
 	background: #16181C;
 }
