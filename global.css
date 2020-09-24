@@ -13,7 +13,8 @@ body {
 	font-size: 14px;
 	line-height: 1.6;
 	color: white;
-	background: #16181C;
+	/* background: #16181C; */
+	background: #0C0F13;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,7 +29,7 @@ h1 {
 }
 
 a {
-	color: inherit;
+	color: #83a0e1;
 }
 
 code {
