@@ -66,10 +66,10 @@
         href="blog">blog</a>
     </li>
 
-    <li>
+    <!-- <li>
       <a
         aria-current={segment === 'contact' ? 'page' : undefined}
         href="contact">contact</a>
-    </li>
+    </li> -->
   </ul>
 </nav>

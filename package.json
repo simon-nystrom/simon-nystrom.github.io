@@ -1,12 +1,12 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "simon-nystrom",
+  "description": "Simon Nyström's Space, a space on the web where I can leave my thoughts.",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
-    "deploy": "sapper export --legacy &&  gh-pages -d __sapper__/export",
+    "deploy": "proselint posts && sapper export --legacy &&  gh-pages -d __sapper__/export",
     "start": "node __sapper__/build"
   },
   "dependencies": {

@@ -5,6 +5,7 @@
 <style>
   hr {
     color: #262e40;
+    margin: 0;
     margin-left: 30px;
     margin-right: 30px;
     transition: all 0.2s ease;

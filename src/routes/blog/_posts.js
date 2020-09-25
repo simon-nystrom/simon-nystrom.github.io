@@ -87,13 +87,17 @@
 
 const fs = require('fs');
 const marked = require('marked');
-var hljs = require('highlight.js');
+const hljs = require('highlight.js');
 const fm = require('front-matter');
 
 
 marked.setOptions({
 	highlight: function (code, lang) {
-		return hljs.highlight(lang, code).value;
+		if (lang) {
+			return hljs.highlight(lang, code).value;
+		} else {
+			return code;
+		}
 	}
 });
 

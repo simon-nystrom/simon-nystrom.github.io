@@ -9,17 +9,8 @@
 </script>
 
 <script>
-  import Collapsible from "../../../components/Collapsible.svelte";
-
   export let categories;
 </script>
-
-<style>
-  ul {
-    margin: 0 0 1em 0;
-    line-height: 1.5;
-  }
-</style>
 
 <svelte:head>
   <title>Blog</title>
@@ -33,5 +24,4 @@
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
   <li><a rel="prefetch" href="blog/category/{category}">{category}</a></li>
-  <Collapsible title={category}>Woop</Collapsible>
 {/each}

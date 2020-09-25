@@ -51,6 +51,7 @@
 
   .tags {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .meta {
