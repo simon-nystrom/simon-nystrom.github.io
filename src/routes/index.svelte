@@ -10,7 +10,6 @@
 
 <script>
   import BlogPosts from "../components/blog/BlogPosts.svelte";
-  import Divider from "../components/design/Divider.svelte";
   export let posts;
 </script>
 

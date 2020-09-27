@@ -6,8 +6,9 @@
   hr {
     color: #262e40;
     margin: 0;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
     transition: all 0.2s ease;
   }
 

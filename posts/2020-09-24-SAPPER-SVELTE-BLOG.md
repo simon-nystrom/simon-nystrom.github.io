@@ -68,6 +68,12 @@ As it stands, the blog posts and their content is hard coded and static, located
 npm install -D marked highlight.js front-matter
 ```
 
+We also need to add a CSS theme to make `highlight.js` do something, go to https://highlightjs.org/static/demo/ and pick a theme and then include it in the `src/template.html` like so:
+
+```html
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css">
+```
+
 I like keeping my blog posts separate from the code itself since they should be independent of where they are rendered vice versa. Let's create a `posts` directory alongside our `src` and `static` folders.
 
 Now we can start rewriting `src/routes/blog/_posts.js` to suit our needs. We'll write some code that can take a Markdown file, including YAML front matter and parse it into something that can be used programmatically. You can replace the contents in `src/routes/blog/_posts.js` with the following code:
@@ -129,7 +135,7 @@ Now you should be able to restart the local development server by re-running `np
 
 # Deploying to GitHub Pages
 
-First of all, we need to make our project into a Git repository and push it to GitHub. To do this, we'll initialize our current directory (should still be `<username>.github.io`) as a Git repository, stage all the files and create our first commit. Finally we also need to push it to GitHub:
+First, we need to make our project into a Git repository and push it to GitHub. To do this, we'll initialize our current directory (should still be `<username>.github.io`) as a Git repository, stage all the files and create our first commit. Finally we also need to push it to GitHub:
 
 ```
 git init
@@ -164,7 +170,7 @@ Now you're all set to simply deploy the site by running:
 npm run deploy
 ```
 
-We're very close to being done now, only one step left. We have to set the `gh-pages` branch that was just deployed as the main branch for GitHub Pages to read from. To do this, visit the GitHub repository you created for your blog, go to settings and scroll down until you see the **GitHub Pages** section. Under **Source** you have to change the branch to the `gh-pages` branch. It might take a few minutes until your page is correctly deployed to `<username>.github.io`.
+We're close to being done now, only one step left. We have to set the `gh-pages` branch that was just deployed as the main branch for GitHub Pages to read from. To do this, visit the GitHub repository you created for your blog, go to settings and scroll down until you see the **GitHub Pages** section. Under **Source** you have to change the branch to the `gh-pages` branch. It might take a few minutes until your page is correctly deployed to `<username>.github.io`.
 
 That's it. All done. Enjoy your newly created and freely hosted blog! 🥳
 
