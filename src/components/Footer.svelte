@@ -28,18 +28,23 @@
     display: flex;
   }
 
-  :global(a.icon):not(:last-child) {
+  :global(.icon-wrapper):not(:last-child) {
     margin-right: 14px;
   }
 
-  :global(a.icon) {
+  :global(.icon-wrapper) {
     transition: color 0.2s ease;
     color: white;
   }
 
-  :global(a.icon):hover {
+  :global(.icon-wrapper):hover {
     cursor: pointer;
     color: #83a0e1;
+  }
+
+  :global(.icon) {
+    width: 1.4em !important;
+    height: 1.4em !important;
   }
 </style>
 
@@ -48,21 +53,21 @@
 
   <div class="social">
     <a
-      class="icon"
+      class="icon-wrapper"
       target="_blank"
       rel="noopener"
       href="https://www.linkedin.com/in/simon-nystr%C3%B6m-192b12a5/">
-      <Icon icon={faLinkedinIn} />
+      <Icon class="icon" icon={faLinkedinIn} />
     </a>
     <a
-      class="icon"
+      class="icon-wrapper"
       target="_blank"
       rel="noopener"
       href="https://github.com/simon-nystrom/">
       <Icon icon={faGithub} class="icon" />
     </a>
     <a
-      class="icon"
+      class="icon-wrapper"
       href="mailto:simon.nystrom90@gmail.com"
       target="_blank"
       rel="noopener">
