@@ -5,8 +5,6 @@
   export let posts;
 </script>
 
-<H3 text="Recent" />
-
 {#each posts as post}
   <BlogLink
     title={post.title}

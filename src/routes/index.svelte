@@ -10,6 +10,7 @@
 
 <script>
   import BlogPosts from "../components/blog/BlogPosts.svelte";
+  import H3 from "../components/design/headers/H3.svelte";
   export let posts;
 </script>
 
@@ -46,5 +47,5 @@
   you some assistance and/or entertainment 🙂.
 </p>
 
-<!-- <Divider /> -->
+<H3 text="Recent" />
 <BlogPosts {posts} />
