@@ -15,6 +15,7 @@
 
 <script>
   import Tag from "../../components/design/tag/Tag.svelte";
+  import Meta from "../../components/Meta.svelte";
 
   export let post;
 </script>
@@ -70,9 +71,7 @@
   }
 </style>
 
-<svelte:head>
-  <title>{post.title}</title>
-</svelte:head>
+<Meta metadata={{ title: post.title, description: post.summary }} />
 
 <h1>{post.title}</h1>
 <div class="meta">

@@ -1,7 +1,8 @@
 ---
 date: "2020-09-27"
-title: "Creating a Markdown powered blog with Svelte, Sapper and GitHub Pages"
+title: "Creating a blog with Svelte, Sapper and GitHub Pages"
 slug: "create-markdown-sapper-svelte-blog"
+summary: "Learn how to create your own blog using Svelte, Sapper, Markdown and how to host it for free on GitHub Pages."
 categories: []
 tags: ["svelte", "sapper", "markdown", "javascript", "blog", "github", "rollup"]
 ---

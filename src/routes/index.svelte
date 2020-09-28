@@ -26,6 +26,9 @@
 
 <svelte:head>
   <title>Simon Nyström's Space</title>
+  <meta
+    name="description"
+    content="Blog posts and notes from a software engineer with an interest in always learning new skills and technologies and to share my knowledge." />
 </svelte:head>
 
 <h2>Hi! 👋</h2>

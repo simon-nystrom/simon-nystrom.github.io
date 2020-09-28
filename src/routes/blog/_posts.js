@@ -24,7 +24,7 @@ for (let i = 0; i < postFiles.length; i++) {
 	const postContent = fs.readFileSync(`posts/${postFiles[i]}`, { encoding: 'utf-8' });
 	const { body, ...frontMatter } = fm(postContent);
 	const { attributes } = frontMatter;
-	const { slug, title, categories, tags, date, isDraft } = attributes;
+	const { slug, title, categories, tags, date, isDraft, summary } = attributes;
 	if (isDraft && !isDev) continue;
 	posts.push({
 		html: marked(body),
@@ -32,7 +32,8 @@ for (let i = 0; i < postFiles.length; i++) {
 		slug,
 		title,
 		categories,
-		tags
+		tags,
+		summary
 	})
 }
 
