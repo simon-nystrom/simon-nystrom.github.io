@@ -8,7 +8,8 @@
     "export": "sapper export --legacy",
     "deploy": "proselint posts && sapper export --legacy &&  gh-pages -d __sapper__/export",
     "deploy -f": "proselint posts || sapper export --legacy &&  gh-pages -d __sapper__/export",
-    "start": "node __sapper__/build"
+    "start": "node __sapper__/build",
+    "lighthouse": "lighthouse https://simon-nystrom.github.io --view"
   },
   "dependencies": {
     "compression": "^1.7.1",
