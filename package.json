@@ -6,9 +6,9 @@
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
-    "deploy": "proselint posts && sapper export --legacy &&  gh-pages -d __sapper__/export",
-    "deploy -f": "proselint posts || sapper export --legacy &&  gh-pages -d __sapper__/export",
+    "deploy": "sapper export --legacy &&  gh-pages -d __sapper__/export",
     "start": "node __sapper__/build",
+    "proselint": "proselint posts",
     "lighthouse": "lighthouse https://simon-nystrom.github.io --view"
   },
   "dependencies": {
