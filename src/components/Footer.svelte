@@ -1,8 +1,9 @@
 <script>
   import Icon from "fa-svelte";
 
-  import { faLinkedinIn, faGithub } from "@fortawesome/fontawesome-free-brands";
-  import { faEnvelope } from "@fortawesome/fontawesome-free-regular";
+  import faLinkedinIn from "@fortawesome/fontawesome-free-brands/faLinkedinIn";
+  import faGithub from "@fortawesome/fontawesome-free-brands/faGithub";
+  import faEnvelope from "@fortawesome/fontawesome-free-regular/faEnvelope";
 </script>
 
 <style>
