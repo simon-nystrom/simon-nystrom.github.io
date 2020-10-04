@@ -4,6 +4,7 @@ title: "Creating a blog with Svelte, Sapper and GitHub Pages"
 slug: "create-markdown-sapper-svelte-blog"
 summary: "Learn how to create your own blog using Svelte, Sapper, Markdown and how to host it for free on GitHub Pages."
 categories: []
+published: true
 tags: ["svelte", "sapper", "markdown", "javascript", "blog", "github", "rollup"]
 ---
 
@@ -11,14 +12,15 @@ The blog where you're reading this is built using the tools mentioned in this po
 
 Note that even though this project will use GitHub pages as its deployment method, it is in no way required to be deployed to GitHub pages. There is a clear decoupling of the blog itself and its method of deployment.
 
------- 
+---
 
 # Project setup
 
 To follow along with the blog you will need to have the following:
+
 - `node` 8.2.0 or later (for `npx` support)
 - A GitHub account
-- An empty (uninitialized) GitHub public repository named *username*.github.io where *username* is your username at GitHub
+- An empty (uninitialized) GitHub public repository named _username_.github.io where _username_ is your username at GitHub
 - Access to your GitHub account through the terminal
 
 When you're all set up and ready to go, let's begin. Begin by running the following commands in a terminal window (replace `<username>` by your GitHub username):
@@ -32,9 +34,11 @@ npm install
 This will execute [`degit`](https://github.com/Rich-Harris/degit) with `npx` to scaffold a Sapper template project in a folder called `<username>.github.io` and change your working directory into said folder and install the required `npm` dependencies.
 
 If you want to see what your site looks like at this point, you can go ahead and run:
+
 ```bash
 npm run dev
 ```
+
 This will start the local development server at http://localhost:3000.
 
 Now it's time to open the project in your favorite code editor. You should have a folder structure similar to the image below at this point:
@@ -59,7 +63,7 @@ Since this blog post is focused on enabling blogging functionality, let's simpli
 
 Now would also be a great time to personalize the `src/routes/index.svelte` file. I will leave it as it is and move on to the blog portion of the site.
 
-----
+---
 
 # Enabling Markdown support
 
@@ -72,7 +76,10 @@ npm install -D marked highlight.js front-matter
 We also need to add a CSS theme to make `highlight.js` do something, go to https://highlightjs.org/static/demo/ and pick a theme and then include it in the `src/template.html` like so:
 
 ```html
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css">
+<link
+  rel="stylesheet"
+  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css"
+/>
 ```
 
 I like keeping my blog posts separate from the code itself since they should be independent of where they are rendered vice versa. Let's create a `posts` directory alongside our `src` and `static` folders.
@@ -82,37 +89,36 @@ Now we can start rewriting `src/routes/blog/_posts.js` to suit our needs. We'll 
 ```javascript
 // src/routes/blog/_posts.js
 
-const fs = require('fs');
-const fm = require('front-matter');
-const marked = require('marked');
-const hljs = require('highlight.js');
+const fs = require("fs");
+const fm = require("front-matter");
+const marked = require("marked");
+const hljs = require("highlight.js");
 
 const files = fs.readdirSync("posts");
 
 // Use highlight.js as the highlighter for the marked library
 marked.setOptions({
-	highlight: function (code, lang) {
-		return hljs.highlight(lang, code).value;
-	}
+  highlight: function (code, lang) {
+    return hljs.highlight(lang, code).value;
+  },
 });
 
 const posts = [];
 for (let i = 0; i < files.length; i++) {
-	const content = fs.readFileSync(`posts/${files[i]}`, { encoding: 'utf-8' });
-	// Use the front-matter library to separate the body from the front matter
-	const { body, ...frontMatter } = fm(content);
-	// Use the marked library to turn markdown into html
-	const html = marked(body);
-	posts.push({ html, ...frontMatter.attributes });
+  const content = fs.readFileSync(`posts/${files[i]}`, { encoding: "utf-8" });
+  // Use the front-matter library to separate the body from the front matter
+  const { body, ...frontMatter } = fm(content);
+  // Use the marked library to turn markdown into html
+  const html = marked(body);
+  posts.push({ html, ...frontMatter.attributes });
 }
 
 export default posts;
-
 ```
 
 The code above will read the contents of the posts located in the `posts` folder and create an array of the posts and their contents so that we can access these posts programmatically.
 
-----
+---
 
 # Creating your first post
 
@@ -132,7 +138,7 @@ The slug is what's used to navigate/link to this specific post, visible right no
 
 Now you should be able to restart the local development server by re-running `npm run dev`. Now visit http://localhost:3000/blog and see your newly created post in the list of recent posts, click the link and it should navigate you to the post.
 
-----
+---
 
 # Deploying to GitHub Pages
 
@@ -147,6 +153,7 @@ git push -u origin master
 ```
 
 Once that's done, we'll install one final dependency to make it easy for us to deploy the site:
+
 ```
 npm install -D gh-pages
 ```
@@ -175,5 +182,4 @@ We're close to being done now, only one step left. We have to set the `gh-pages`
 
 That's it. All done. Enjoy your newly created and freely hosted blog! 🥳
 
-----
-
+---

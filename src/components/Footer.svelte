@@ -3,6 +3,8 @@
 
   import faLinkedinIn from "@fortawesome/fontawesome-free-brands/faLinkedinIn";
   import faGithub from "@fortawesome/fontawesome-free-brands/faGithub";
+  // import faGithub from "@fortawesome/fontawesome-free-brands/fa";
+
   import faEnvelope from "@fortawesome/fontawesome-free-regular/faEnvelope";
 </script>
 
@@ -47,6 +49,18 @@
     width: 1.4em !important;
     height: 1.4em !important;
   }
+
+  a img {
+    transition: background 0.2s ease;
+    width: 1.4em !important;
+    height: 1.4em !important;
+    background: white;
+  }
+
+  a img:hover {
+    cursor: pointer;
+    background: #83a0e1;
+  }
 </style>
 
 <footer>
@@ -73,6 +87,11 @@
       target="_blank"
       rel="noopener">
       <Icon icon={faEnvelope} class="icon" />
+    </a>
+    <a class="icon-wrapper" href="https://dev.to/simonnystrom">
+      <img
+        src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+        alt="Simon Nyström's DEV Profile" />
     </a>
   </div>
 </footer>
