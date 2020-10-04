@@ -5,7 +5,6 @@
 <style>
   .container {
     margin-top: 2em;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
   }

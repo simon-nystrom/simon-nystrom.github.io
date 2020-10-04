@@ -26,7 +26,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 4px;
-    padding-top: 4px;
+    padding-top: 12px;
   }
 
   .tags {
