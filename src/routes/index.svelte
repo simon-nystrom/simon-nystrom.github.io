@@ -3,8 +3,9 @@
     return this.fetch(`blog.json`)
       .then((r) => r.json())
       .then((posts) => {
-        console.log("posts: ", posts);
-        return { posts };
+        return {
+          posts: posts.sort((a, b) => new Date(b.date) - new Date(a.date)),
+        };
       });
   }
 </script>

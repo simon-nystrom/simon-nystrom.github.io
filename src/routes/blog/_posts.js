@@ -17,8 +17,6 @@ const postFiles = fs.readdirSync("posts");
 
 const isDev = process.env.NODE_ENV === "development";
 
-console.log("isDev: ", isDev);
-
 const posts = [];
 const categories = ["category"];
 for (let i = 0; i < postFiles.length; i++) {

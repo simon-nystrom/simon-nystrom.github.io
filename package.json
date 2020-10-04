@@ -9,7 +9,7 @@
     "deploy": "sapper export --legacy && cp CNAME __sapper__/export && gh-pages -d __sapper__/export",
     "start": "node __sapper__/build",
     "proselint": "proselint posts",
-    "lighthouse": "lighthouse https://simon-nystrom.github.io --view"
+    "lighthouse": "lighthouse https://newcurrent.se --view"
   },
   "dependencies": {
     "compression": "^1.7.1",
