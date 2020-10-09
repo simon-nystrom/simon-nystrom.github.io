@@ -1,7 +1,7 @@
 import { posts } from './_posts.js';
 
-
-const contents = JSON.stringify(posts.map(post => {
+const sorted = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+const contents = JSON.stringify(sorted.map(post => {
 	return {
 		title: post.title,
 		slug: post.slug,

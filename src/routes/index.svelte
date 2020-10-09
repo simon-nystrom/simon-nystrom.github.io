@@ -4,7 +4,7 @@
       .then((r) => r.json())
       .then((posts) => {
         return {
-          posts: posts.sort((a, b) => new Date(b.date) - new Date(a.date)),
+          posts: posts,
         };
       });
   }
