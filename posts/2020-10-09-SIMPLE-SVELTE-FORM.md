@@ -4,7 +4,7 @@ title: "Create a simple Form component in Svelte"
 slug: "simple-svelte-form"
 summary: "Learn how to create a simple form component for Svelte."
 categories: []
-published: false
+published: true
 tags: ["svelte", "javascript"]
 ---
 
@@ -264,7 +264,7 @@ We also need to add another field to our `src/App.svelte` so that it shows up on
 
 After all this is done, your page should now look something like the following after pressing submit:
 
-![Form](./images/svelte/svelte_form.png)
+![Form](./images/svelte/svelte_form_1.png)
 
 ---
 
