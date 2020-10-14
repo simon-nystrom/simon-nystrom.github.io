@@ -4,7 +4,8 @@
 
 <style>
   hr {
-    color: #262e40;
+    border:none;
+    border-bottom: 1px solid #262e40;
     margin: 0;
     margin-top: 10px;
     margin-left: 4px;
@@ -13,9 +14,9 @@
   }
 
   .full {
+    border-bottom: 1px solid #83a0e1;
     margin-left: 0;
     margin-right: 0;
-    color: #83a0e1;
   }
 
   @media screen and (max-width: 992px) {
