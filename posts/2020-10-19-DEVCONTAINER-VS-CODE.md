@@ -4,7 +4,7 @@ title: "Containerizing your development environment"
 slug: "containerized-development-environment"
 summary: "Learn how to container your development environment with Docker and Visual Studio Code."
 categories: []
-published: false
+published: true
 tags: ["docker", "visual-studio-code", "node", "javascript"]
 ---
 
