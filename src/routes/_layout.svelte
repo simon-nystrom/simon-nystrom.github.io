@@ -11,7 +11,7 @@
     position: relative;
     max-width: 48em;
     padding: 2em;
-    padding-bottom: 3em;
+    padding-bottom: 4.5em;
     margin: 0 auto;
     box-sizing: border-box;
   }

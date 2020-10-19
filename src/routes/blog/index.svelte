@@ -10,19 +10,16 @@
 
 <script>
   import BlogPosts from "../../components/blog/BlogPosts.svelte";
+import H3 from "../../components/design/headers/H3.svelte";
 
   export let posts;
 </script>
 
-<style>
-  ul {
-    margin: 0 0 1em 0;
-    line-height: 1.5;
-  }
-</style>
+
 
 <svelte:head>
   <title>Blog</title>
 </svelte:head>
 
+<H3 text="Recent" />
 <BlogPosts {posts} />
