@@ -5,7 +5,7 @@ slug: "containerized-development-environment"
 summary: "Learn how to containerize your development environment with Docker and Visual Studio Code."
 categories: []
 published: true
-tags: ["docker", "visual-studio-code", "node", "javascript"]
+tags: ["docker", "vscode", "node", "javascript"]
 ---
 
 If you often work from different machines or on different projects where you want to be able to share a development environment within the team to ensure consistent use of versions and so on, containerizing your development environment is the way to go.
