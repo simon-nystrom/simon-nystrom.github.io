@@ -3,15 +3,18 @@ const marked = require("marked");
 const hljs = require("highlight.js");
 const fm = require("front-matter");
 
-marked.setOptions({
-  highlight: function (code, lang) {
-    if (lang) {
-      return hljs.highlight(lang, code).value;
-    } else {
-      return code;
+marked.use({
+  renderer: {
+    code(code, lang, escaped) {
+      if (lang) {
+        const highlighted = hljs.highlight(lang, code).value;
+        return `<pre><div class="copy-me" onclick="copyCode(this)">Copy</div><code>${highlighted}</code></pre>`;
+      }
+
+      return `<pre><div class="copy-me" onclick="copyCode(this)">Copy</div><code>${code}</code></pre>`;
     }
-  },
-});
+  }
+})
 
 const postFiles = fs.readdirSync("posts");
 

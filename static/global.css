@@ -7,11 +7,31 @@ html, body {
 	position: relative;
 }
 
+.copy-me {
+	transition: opacity 0.2s ease, color 0.2s ease;
+	opacity:0;
+	position: absolute;
+	top:0;
+	right:10px;
+	color:white;
+
+}
+
+.copy-me:hover {
+	color: #32e678 !important;
+	cursor:pointer;
+}
+
+p img {
+	margin: 0 auto;
+	display:block;
+}
+
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	font-size: 14px;
-	line-height: 1.6;
+	line-height: 1.7;
 	color: white;
 	/* background: #16181C; */
 	background: #0C0F13;

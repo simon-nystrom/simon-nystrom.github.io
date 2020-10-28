@@ -1,6 +1,6 @@
 {
   "name": "simon-nystrom",
-  "description": "Simon Nyström's Space, a space on the web where I can leave my thoughts.",
+  "description": "Newcurrent Blog, a blog on the web where I can leave my thoughts.",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

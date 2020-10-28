@@ -44,6 +44,20 @@
     padding: 0.5em;
     border-radius: 4px;
     overflow-x: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #282c34;
+    transition: border 0.2s ease, filter 0.2s ease;
+    position: relative;
+  }
+
+  .content :global(pre:hover) {
+    filter: brightness(110%);
+    border: 1px solid #d19a66;
+  }
+
+  .content :global(pre:hover) :global(.copy-me) {
+    opacity: 1;
   }
 
   .content :global(pre) :global(code) {

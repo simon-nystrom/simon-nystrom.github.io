@@ -8,10 +8,14 @@
     align-items: center;
   }
 
+  h3 {
+    font-size: 1.4em;
+  }
+
   .inline-divide {
     border-bottom: 1px solid #262e40;
     margin-left: 0.6em;
-    margin-right: 30px;
+    margin-right: 6px;
     flex: 1;
     margin-top: 4px;
   }
