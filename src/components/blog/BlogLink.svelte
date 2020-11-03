@@ -57,7 +57,7 @@
   }
 </style>
 
-<a {href} on:mouseover={onMouseEnter} on:mouseout={onMouseExit}>
+<a {href} rel="prefetch" on:mouseover={onMouseEnter} on:mouseout={onMouseExit}>
   <div class="container">
     <h4>{title}</h4>
     <div class="meta">
