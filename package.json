@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "yarn build && next export",
-    "deploy": "cp CNAME out && touch ./out/.nojekyll && gh-pages -t -d out",
+    "deploy": "yarn export && cp CNAME out && touch out/.nojekyll && gh-pages -t -d out",
     "proselint": "proselint posts",
     "lighthouse": "lighthouse https://newcurrent.se --view"
   },

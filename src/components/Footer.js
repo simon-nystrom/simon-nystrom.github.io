@@ -29,6 +29,7 @@ const Copyright = styled.div`
 
 const Social = styled.div`
   display: flex;
+  max-height: 50px;
 `
 
 const Icon = styled.div`
