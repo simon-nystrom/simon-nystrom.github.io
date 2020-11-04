@@ -45,7 +45,7 @@ const Date = styled.p`
 const BlogLink = ({ post }) => {
   const [isHovered, setIsHovered] = useState(false)
   return (
-    <Link href={`blog/${post.slug}`}>
+    <Link href={`blog/${post.slug}`} passHref>
       <A
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

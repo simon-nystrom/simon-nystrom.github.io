@@ -42,11 +42,11 @@ const NavBar = () => {
   return (
     <NavWrapper>
       <Nav>
-        <Link href="/">
+        <Link href="/" passHref>
           <A active={pathname === '/'}>home</A>
         </Link>
 
-        <Link href="/blog">
+        <Link href="/blog" passHref>
           <A active={pathname.startsWith('/blog')}>blog</A>
         </Link>
       </Nav>
