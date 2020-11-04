@@ -151,7 +151,7 @@ Let's update our `src/App.svelte` file to use this component:
 
 Your page should look something like this after submitting some values in the new Form component:
 
-![Form](./images/svelte/svelte_form.png)
+![Form](/images/svelte/svelte_form.png)
 
 ---
 
@@ -264,7 +264,7 @@ We also need to add another field to our `src/App.svelte` so that it shows up on
 
 After all this is done, your page should now look something like the following after pressing submit:
 
-![Form](./images/svelte/svelte_form_1.png)
+![Form](/images/svelte/svelte_form_1.png)
 
 ---
 

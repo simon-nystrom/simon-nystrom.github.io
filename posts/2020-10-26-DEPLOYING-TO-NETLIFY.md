@@ -44,7 +44,7 @@ npx serve __sapper__/export
 
 This will start a local webserver on your computer and it should greet you with something like the following image:
 
-![serve start up indicator](./images/sapper/npx_serve_startup.png)
+![serve start up indicator](/images/sapper/npx_serve_startup.png)
 
 Visit the URL in the above notification and make sure your site is served properly.
 
@@ -80,7 +80,7 @@ If you refresh your GitHub repository after this, you should see your code there
 
 Log in to your [Netlify](https://www.netlify.com/) account and go to the `Team overview` tab. Here you should see something similar to the image below:
 
-![Netlify sites](./images/netlify/netlify_sites.png)
+![Netlify sites](/images/netlify/netlify_sites.png)
 
 All we have to do now is complete the following steps:
 
@@ -97,7 +97,7 @@ All we have to do now is complete the following steps:
 
 After completing the steps above, you should be sent to a view that looks something like this:
 
-![Netlify built](./images/netlify/netlify_built.png)
+![Netlify built](/images/netlify/netlify_built.png)
 
 Visiting that URL should take you to your deployed app 😎.
 

@@ -41,15 +41,15 @@ As stated in the introduction, we're going to focus on searching on IMDB showing
 
 Visit www.imdb.com in your browser and search for a movie of your choice. I searched for *Jurassic Park*, you should be greeted with something like the following image:
 
-![Jurassic Park search result on IMDB](./images/imdb/jurassic_park_search_res.png)
+![Jurassic Park search result on IMDB](/images/imdb/jurassic_park_search_res.png)
 
 Once you're on this page, inspect one of the rows in the *"Titles"* table by right clicking and pressing *"Inspect element"*, this varies from browser to browser but in Firefox it looks like this:
 
-![Inspect element](./images/imdb/inspect_element.png)
+![Inspect element](/images/imdb/inspect_element.png)
 
 You might also have noticed that something opened up at the bottom of your browser, that section is commonly referred to as the dev tools. We'll be using that now to figure out the structure of the data that we're after. At the time of writing this, it looks like this:
 
-![Dev tools open](./images/imdb/dev_tools.png)
+![Dev tools open](/images/imdb/dev_tools.png)
 
 What's displayed here is the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) structure. The highlighted row here is what I selected when taking the *"Inspect element"* action earlier. This shows us how all the HTML nodes relate to each other and where in the DOM the data we're after is located. Since we want to be able to list these results in our application, we need to be able to present these search results.
 
@@ -57,12 +57,12 @@ We can see that the data we're interested in is located inside the `<td>` elemen
 
 Let's follow the link to this title to see what the next page we need to tackle looks like, click the link to one of the search results and you should end up on the page for the movie/show you picked:
 
-![Jurassic park](./images/imdb/jurassic_park.png)
+![Jurassic park](/images/imdb/jurassic_park.png)
 
 When on this page, let's repeat the step and *"Inspect element"* on the rating display:
 
-![Inspect rating element](./images/imdb/inspect_element_2.png)
-![Dev tools on inspect rating element](./images/imdb/dev_tools_2.png)
+![Inspect rating element](/images/imdb/inspect_element_2.png)
+![Dev tools on inspect rating element](/images/imdb/dev_tools_2.png)
 
 Here we can see that for this page the data we're interested in is located inside a `span` element wrapped by a `strong` element that is in turn wrapped by a `div` element with the class `ratingValue`.
 
@@ -116,7 +116,7 @@ python3 scrape.py
 
 Enter a search term and something similar should show up:
 
-![in app search results](./images/imdb/in_app_search_res.png)
+![in app search results](/images/imdb/in_app_search_res.png)
 
 You might notice that selecting a result does nothing at the moment, and that's cause we only implemented half the logic. It's always good to test that what you've got so far is working at least, and if you're seeing search results in your terminal then you're good to continue.
 
@@ -166,7 +166,7 @@ run()
 
 Running our app now results in the following behavior:
 
-![Final output](./images/imdb/final.png)
+![Final output](/images/imdb/final.png)
 
 ----
 

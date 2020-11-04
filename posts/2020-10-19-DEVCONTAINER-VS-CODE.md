@@ -36,7 +36,7 @@ Once the extension is installed, you need to reload Visual Studio Code to activa
 
 Once you've completed the previous step, press the key combination `CMD + SHIFT + P` (Mac) `CTRL + SHIFT + P` (Windows) to open the command palette. Type `remote-containers` and you should be greeted with something similar to the image below:
 
-![Command palette with remote containers search results](./images/vscode/command_palette_remote_containers.png)
+![Command palette with remote containers search results](/images/vscode/command_palette_remote_containers.png)
 
 To initialize the devcontainer files, select the `Remote-Containers: Add Development Container Configuration Files...` option and you will get an extensive list presented to you where you get to pick which predefined container definition to use. Since this example will set up a Node.js project, select the `Node.js` container definition then pick a version, I went with `14`. If it doesn't show up, you might have to search for it and click `Show all definitions...`.
 
@@ -78,7 +78,7 @@ It is possible that Visual Studio Code noticed the creation of this `.devcontain
 
 You should now be connected to the dev container, indicated in the bottom left like this:
 
-![Dev container indicator](./images/vscode/dev_container.png)
+![Dev container indicator](/images/vscode/dev_container.png)
 
 You might also have noticed that the open folder in the Explorer window has been appended with `[DEV CONTAINER: NODE.JS]`.
 
@@ -92,7 +92,7 @@ Our directory isn't empty anymore since we now have a `.devcontainer` folder, ho
 
 Now we're ready to use Node.js inside the container with the version we specified earlier (`14` in this case):
 
-![Node running inside the dev container](./images/vscode/node_dev_container.png)
+![Node running inside the dev container](/images/vscode/node_dev_container.png)
 
 ---
 

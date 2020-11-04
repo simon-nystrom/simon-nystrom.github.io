@@ -43,7 +43,7 @@ This will start the local development server at http://localhost:3000.
 
 Now it's time to open the project in your favorite code editor. You should have a folder structure similar to the image below at this point:
 
-![Folder structure](./images/sapper/sapper_folder_structure.png)
+![Folder structure](/images/sapper/sapper_folder_structure.png)
 
 The files/folders that we will be interacting with are listed below:
 
@@ -59,7 +59,7 @@ rm -r scripts static/*.png static/*.jpg
 
 Since this blog post is focused on enabling blogging functionality, let's simplify our site a some more. Remove the list item containing the link to **about** in the `src/components/Nav.svelte` file and delete the file `src/routes/about.svelte`. Your site should now only have two items in the nav bar, like the image below:
 
-![Nav bar](./images/sapper/sapper_nav_bar.png)
+![Nav bar](/images/sapper/sapper_nav_bar.png)
 
 Now would also be a great time to personalize the `src/routes/index.svelte` file. I will leave it as it is and move on to the blog portion of the site.
 
