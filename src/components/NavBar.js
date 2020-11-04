@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import styled from 'styled-components'
 
 const NavWrapper = styled.div`
@@ -29,6 +30,7 @@ const A = styled.a`
   } 
 
   &:hover {
+    cursor:pointer;
     border-bottom: 2px solid #83a0e1;
   }
 
@@ -40,13 +42,13 @@ const NavBar = () => {
   return (
     <NavWrapper>
       <Nav>
-        <A active={pathname === '/'} href="/">
-          home
-        </A>
+        <Link href="/">
+          <A active={pathname === '/'}>home</A>
+        </Link>
 
-        <A active={pathname.startsWith('/blog')} href="/blog">
-          blog
-        </A>
+        <Link href="/blog">
+          <A active={pathname.startsWith('/blog')}>blog</A>
+        </Link>
       </Nav>
     </NavWrapper>
   )

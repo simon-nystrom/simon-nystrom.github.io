@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 import Divider from './Divider'
 import Tag from './Tag'
@@ -44,28 +45,28 @@ const Date = styled.p`
 const BlogLink = ({ post }) => {
   const [isHovered, setIsHovered] = useState(false)
   return (
-    <A
-      href={`blog/${post.slug}`}
-      key={post.slug}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Container>
-        <h4>{post.title}</h4>
-        <Meta>
-          <Tags>
-            {post.tags
-              .filter((_, i) => i < 2)
-              .map((t) => (
-                <Tag key={t} tag={t} />
-              ))}
-            {post.tags.length > 2 ? <Tag key={'more'} tag={'...'} /> : null}
-            <Date>{post.date}</Date>
-          </Tags>
-        </Meta>
-      </Container>
-      <Divider fullWidth={isHovered} />
-    </A>
+    <Link href={`blog/${post.slug}`}>
+      <A
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <Container>
+          <h4>{post.title}</h4>
+          <Meta>
+            <Tags>
+              {post.tags
+                .filter((_, i) => i < 2)
+                .map((t) => (
+                  <Tag key={t} tag={t} />
+                ))}
+              {post.tags.length > 2 ? <Tag key={'more'} tag={'...'} /> : null}
+              <Date>{post.date}</Date>
+            </Tags>
+          </Meta>
+        </Container>
+        <Divider fullWidth={isHovered} />
+      </A>
+    </Link>
   )
 }
 
