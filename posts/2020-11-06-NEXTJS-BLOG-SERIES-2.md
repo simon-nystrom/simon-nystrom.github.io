@@ -7,7 +7,7 @@ part: 2
 last_part: "?"
 summary: "Learn about routing and dynamic routes in Next.js."
 categories: []
-published: false
+published: true
 tags: ["react", "javascript", "nextjs", "tutorial"]
 ---
 
