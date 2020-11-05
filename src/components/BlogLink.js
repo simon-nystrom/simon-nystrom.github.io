@@ -82,7 +82,7 @@ const BlogLink = ({ post }) => {
                   <Tag key={t} tag={t} />
                 ))}
               {post.tags.length > 2 ? <Tag key={'more'} tag={'...'} /> : null}
-              <Date>{post.date}</Date>
+              <Date>{post.date.substr(0, 10)}</Date>
             </Tags>
           </Meta>
         </Container>
