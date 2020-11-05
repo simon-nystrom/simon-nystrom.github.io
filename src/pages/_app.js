@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useEffect } from 'react'
 import styled from 'styled-components'
-import '../../public/global.css'
+import '../../styles/global.css'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 
