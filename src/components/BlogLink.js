@@ -42,7 +42,28 @@ const Date = styled.p`
   margin-left: 6px;
 `
 
+const H5 = styled.h5`
+  color: #7b7b7b;
+  font-size: 0.7em;
+`
+
+const renderTitle = (post) => {
+  const isPartOfSeries = !!post.series_title
+  if (isPartOfSeries) {
+    return (
+      <div>
+        <h4>{post.title}</h4>
+        <H5>
+          {post.series_title} ({post.part} / {post.last_part})
+        </H5>
+      </div>
+    )
+  }
+  return <h4>{post.title}</h4>
+}
+
 const BlogLink = ({ post }) => {
+  console.log('post: ', post.last_part)
   const [isHovered, setIsHovered] = useState(false)
   return (
     <Link href={`blog/${post.slug}`} passHref>
@@ -51,7 +72,8 @@ const BlogLink = ({ post }) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <Container>
-          <h4>{post.title}</h4>
+          {renderTitle(post)}
+
           <Meta>
             <Tags>
               {post.tags

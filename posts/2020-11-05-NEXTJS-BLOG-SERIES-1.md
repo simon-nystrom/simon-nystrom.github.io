@@ -1,12 +1,13 @@
 ---
 date: "2020-11-05"
 series_title: "Creating a blog with React and Next.js"
-title: "Getting the basics set up"
-slug: "react-nextjs-blog"
+title: "Initializing a Next.js project"
+slug: "initialize-nextjs-project"
 part: 1
-summary: "Initialize a Next.js project and get it up and running with some basic pages."
+last_part: "?"
+summary: "Initialize a Next.js project and get it up and running with a basic page."
 categories: []
-published: false
+published: true
 tags: ["react", "javascript", "nextjs", "tutorial"]
 ---
 
@@ -92,7 +93,7 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 ```
 
-Seems very innocuous, and it is at this stage. The `_app.js` is executed for all your pages defined in the `pages` directory, it is passed to the `MyApp` function as the `Component` argument and is accessible here. We'll be using the `MyApp` component in another part of this tutorial series to define things we want present on all pages, like a header and a footer. For now this code does nothing but return the page as it is handed to it.
+Seems innocuous, and it is at this stage. The `_app.js` is executed for all your pages defined in the `pages` directory, it is passed to the `MyApp` function as the `Component` argument and is accessible here. We'll be using the `MyApp` component in another part of this tutorial series to define things we want present on all pages, like a header and a footer. For now this code does nothing but return the page as it is handed to it.
 
 #### index.js
 
@@ -103,13 +104,13 @@ export default function Home() {
   return "Home sweet home";
 }
 ```
-This `index.js` file is what will be served when we visit the root of our site. Start your project by running `yarn dev` and then visit http://localhost:3000/ and you should see a very basic web site that just says *Home sweet home*.
+This `index.js` file is what will be served when we visit the root of our site. Start your project by running `yarn dev` and then visit http://localhost:3000/ and you should see a basic web site that just says *Home sweet home*.
 
 ----
 
 # Adding our project to GitHub
 
-Only storing our code locally is not very safe or good practice, let's create a repository on GitHub and push our code there. Since this is one of the prerequisites, I assume you already know how to do this. Just make sure the project you create is an empty project that is not initialized with any files like a `README.md` or a license file.
+Only storing our code locally is not safe or good practice, let's create a repository on GitHub and push our code there. Since this is one of the prerequisites, I assume you already know how to do this. Just make sure the project you create is an empty project that is not initialized with any files like a `README.md` or a license file.
 
 Once you've created your GitHub account, follow the steps they provide:
 
@@ -121,7 +122,7 @@ git push -u origin main
 
 ----
 
-Now we have a very basic `Next.js` set up and ready to go for the next part of this tutorial series.
+Now we have a basic `Next.js` set up and ready to go for the next part of this tutorial series.
 
 Here's what my project looks like at this stage: https://github.com/simon-nystrom/nextjs-blog-example/tree/p1
 
