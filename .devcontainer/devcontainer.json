@@ -1,11 +1,7 @@
 {
-	"name": "Node.js",
+	"name": "Blog Container",
 	"build": {
 		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick a Node version: 10, 12, 14
-		"args": {
-			"VARIANT": "14"
-		}
 	},
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
@@ -18,7 +14,10 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "yarn",
+	"postCreateCommand": "yarn && cp .devcontainer/proselint_config.json ~/.config/proselint/config",
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "node"
+	// "remoteUser": "node",
+	"mounts": [
+		"source=blog-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+	]
 }

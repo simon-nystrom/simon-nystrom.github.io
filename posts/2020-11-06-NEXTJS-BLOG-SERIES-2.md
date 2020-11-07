@@ -42,7 +42,7 @@ export default BlogPage;
 
 If you run your project now by running `yarn dev`, you'll see that if you go to http://localhost:3000 you'll see the contents of `pages/index.js` but if you instead visit http://localhost:3000/blog you'll be greeted with *This is the blog page!*
 
-Basic routing is cool and all, but it's not very useful when we want to build dynamic routes that can be content-driven. Let's create a dynamic route that we can use for our blog posts.
+Basic routing is cool and all, but it's not useful when we want to build dynamic routes that can be content-driven. Let's create a dynamic route that we can use for our blog posts.
 
 ----
 
@@ -92,7 +92,7 @@ More info about this here:
 
 # Creating paths based on our blog posts
 
-In the above section, I mentioned that all dynamic paths have to be specified in `getStaticPaths` if they use `getStaticProps`, while this is true, it's not very useful doing all this by hand as it would get tedious very fast. Let's create a way to define these routes based on some fake blog posts.
+In the above section, I mentioned that all dynamic paths have to be specified in `getStaticPaths` if they use `getStaticProps`, while this is true, it's not useful doing all this by hand as it would get tedious quickly. Let's create a way to define these routes based on some fake blog posts.
 
 In the `pages` directory, create a file called `_posts.js`, we'll use this file to define our posts. For now, these will be hardcoded, in a later part of this series we will read in Markdown files and generate our posts based on those. 
 

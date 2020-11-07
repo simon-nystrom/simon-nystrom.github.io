@@ -1,13 +1,13 @@
 {
   "name": "simon-nystrom",
   "description": "Newcurrent Blog, a blog on the web where I can leave my thoughts.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "export": "yarn build && next export",
     "start": "next start",
-    "deploy": "yarn export && cp CNAME out && touch out/.nojekyll && gh-pages -t -d out",
+    "deploy": "yarn proselint && yarn export && cp CNAME out && touch out/.nojekyll && gh-pages -t -d out",
     "proselint": "proselint posts",
     "lighthouse": "lighthouse https://newcurrent.se --view"
   },
