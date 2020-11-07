@@ -37,7 +37,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 14px;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
   color: white;
   /* background: #16181C; */
   background: #0c0f13;
@@ -64,7 +64,7 @@ a {
 }
 
 code {
-  font-family: menlo, inconsolata, monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: calc(1em - 2px);
   background: #282c34;
   padding: 0.2em 0.4em;

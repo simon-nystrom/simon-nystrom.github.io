@@ -63,7 +63,6 @@ const renderTitle = (post) => {
 }
 
 const BlogLink = ({ post }) => {
-  console.log('post: ', post.last_part)
   const [isHovered, setIsHovered] = useState(false)
   return (
     <Link href={`blog/${post.slug}`} passHref>

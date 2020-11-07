@@ -7,6 +7,8 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"></link>
           <link
             href="https://use.fontawesome.com/releases/v5.15.1/css/svg-with-js.css"
             rel="stylesheet"

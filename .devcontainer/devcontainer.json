@@ -19,5 +19,8 @@
 	// "remoteUser": "node",
 	"mounts": [
 		"source=blog-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+	],
+	"forwardPorts": [
+		3000
 	]
 }
