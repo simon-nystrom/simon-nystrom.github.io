@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styled from 'styled-components'
+// import Logo from './Logo'
 
 const NavWrapper = styled.div`
   border-bottom: 2px solid #262e40;
@@ -42,6 +43,7 @@ const NavBar = () => {
   return (
     <NavWrapper>
       <Nav>
+        {/* <Logo width={32} height={32} /> */}
         <Link href="/" passHref>
           <A active={pathname === '/'}>home</A>
         </Link>
