@@ -224,7 +224,7 @@ That's great. We've added a new type and handled the addition of it. You can't i
 
 # Adding Todos to our state
 
-First of all, we need a button we can press so that the value of our input is added as a todo in our Todo list.
+First, we need a button we can press so that the value of our input is added as a todo in our Todo list.
 
 Let's start by defining a new type of message:
 
