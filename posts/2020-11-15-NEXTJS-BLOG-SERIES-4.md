@@ -261,7 +261,7 @@ In a previous post, we've just styled components we created ourselves. Now since
 
 If you're completely caught up with the tutorial series at this point, your page looks something like this:
 
-![Page at this point](images/next/page.png)
+![Page at this point](/images/next/page.png)
 
 It's not awful, but obviously the code block could really use a background, it doesn't stand out enough from the rest of the text in my opinion. Let's do that now.
 
