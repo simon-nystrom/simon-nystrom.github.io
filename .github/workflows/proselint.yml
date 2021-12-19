@@ -1,21 +1,19 @@
-name: Docker Image CI
+name: Proselint
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag proselint:v1
-      
-    - name: Build the Docker image
-      run: docker run proselint:v1
+      - uses: actions/checkout@v2
+      - name: Build the Proselint Docker image
+        run: docker build . --file Dockerfile --tag proselint:v1
+
+      - name: Run the Proselint Docker image
+        run: docker run proselint:v1
