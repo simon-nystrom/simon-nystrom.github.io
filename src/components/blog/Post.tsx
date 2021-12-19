@@ -1,5 +1,4 @@
 import { MDXProvider } from "@mdx-js/react";
-import Image from "next/image";
 import A from "./A";
 import Divider from "./Divider";
 import Headers from "./Headers";
