@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <div className="flex items-center mb-4">
+    <div className="flex items-center mb-8">
       <h1 className="text-xl border-r border-orange-300 pr-6">newcurrent</h1>
       <nav className="pl-6">
         <ul className="flex gap-6 justify-items-end">

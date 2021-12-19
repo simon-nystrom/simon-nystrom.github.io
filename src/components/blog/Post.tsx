@@ -20,7 +20,7 @@ const components = {
 
 const Post = (props: any) => (
   <MDXProvider components={components}>
-    <main className="mx-auto md:max-w-screen-md pb-20 mt-8" {...props}></main>
+    <main className="mx-auto max-w-screen-md pb-20 mb-8" {...props}></main>
   </MDXProvider>
 );
 
