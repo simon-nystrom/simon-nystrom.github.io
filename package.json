@@ -1,43 +1,33 @@
 {
-  "name": "simon-nystrom",
-  "description": "Newcurrent Blog, a blog on the web where I can leave my thoughts.",
-  "version": "1.0.0",
+  "name": "new-web",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "yarn build && next export",
+    "export": "next build && next export",
     "start": "next start",
-    "deploy": "yarn proselint && yarn export && cp CNAME out && touch out/.nojekyll && gh-pages -t -d out",
-    "proselint": "proselint posts",
-    "lighthouse": "lighthouse https://newcurrent.se --view"
+    "lint": "next lint",
+    "proselint": "docker build -t proselint:v1 . && docker run proselint:v1"
   },
   "dependencies": {
-    "next": "^10.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@next/mdx": "^12.0.7",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sharp": "^0.29.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.12",
-    "babel-plugin-styled-components": "^1.11.1",
-    "eslint": "^7.12.1",
-    "eslint-config-standard": "^16.0.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.21.5",
-    "front-matter": "^4.0.2",
-    "gh-pages": "^3.1.0",
-    "highlight.js": "^10.2.1",
-    "lodash": "^4.17.20",
-    "marked": "^1.2.0",
-    "styled-components": "^5.2.1"
+    "@tailwindcss/typography": "^0.5.0",
+    "@types/mdx-js__react": "^1.5.5",
+    "@types/node": "17.0.0",
+    "@types/react": "17.0.37",
+    "autoprefixer": "^10.4.0",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.7",
+    "typescript": "4.5.4"
   }
 }
