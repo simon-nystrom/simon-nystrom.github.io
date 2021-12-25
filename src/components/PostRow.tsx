@@ -9,7 +9,7 @@ const PostRow = ({ post }: { post: PostMeta }) => (
       <h2 className="text-2xl">{post.title}</h2>
       <div className="flex flex-row md:flex-col justify-end  items-end md:justify-center gap-2">
         <p className="text-sm mt-2 text-gray-400">{post.date}</p>
-        <div className="flex flex-row items-end gap-2">
+        <div className="flex-row items-end gap-2 hidden sm:flex">
           <Tag idx={0} text={post.series}></Tag>
           {post.tags.map((tag, i) => (
             <Tag key={tag} idx={i + 1} text={tag}></Tag>
