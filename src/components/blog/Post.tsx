@@ -1,4 +1,5 @@
 import { MDXProvider } from "@mdx-js/react";
+
 import A from "./A";
 import Divider from "./Divider";
 import Headers from "./Headers";
@@ -6,6 +7,7 @@ import Img from "./Img";
 import InlineCode from "./InlineCode";
 import Paragraph from "./Paragraph";
 import UL from "./UL";
+import { MDXRemote } from "next-mdx-remote";
 
 const components = {
   h1: Headers.H1,
@@ -19,9 +21,9 @@ const components = {
 };
 
 const Post = (props: any) => (
-  <MDXProvider components={components}>
+  <MDXRemote {...props.source} components={components}>
     <main className="mx-auto max-w-screen-md pb-20 mb-8" {...props}></main>
-  </MDXProvider>
+  </MDXRemote>
 );
 
 export default Post;

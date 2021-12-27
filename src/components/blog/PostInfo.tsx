@@ -7,7 +7,7 @@ type Props = {
 };
 
 const PostInfo = ({ date, series, tags }: Props) => (
-  <div className="flex -mt-2 mb-4 text-sm justify-between">
+  <div className="flex -mt-2 mb-4 text-sm justify-between mx-auto max-w-screen-md">
     <span className="font-bold">{date}</span>
     <div className="flex-col sm:flex-row items-end flex gap-2 font-semibold">
       {series && <Tag idx={0} text={series}></Tag>}

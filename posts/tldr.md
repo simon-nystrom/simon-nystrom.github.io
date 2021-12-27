@@ -1,20 +1,11 @@
-import Post from "../../components/blog/Post";
-import PostInfo from "../../components/blog/PostInfo";
-import SeriesInfo from "../../components/blog/SeriesInfo";
-
-export const meta = {
-  title: "tldr: Remember your commands",
-  author: "Simon Nyström",
-  series: "command line tool monthly",
-  date: "2021-12-18",
-  tags: ["terminal"],
-  slug: "tldr",
-};
-
-# tldr: Remember your commands
-
-<PostInfo date={meta.date} series={meta.series} tags={meta.tags}></PostInfo>
-<SeriesInfo series={meta.series}></SeriesInfo>
+---
+title: "tldr: Remember your commands"
+author: "Simon Nyström"
+series: "command line tool monthly"
+date: "2021-12-18"
+tags: ["terminal"]
+slug: "tldr"
+---
 
 ## What is `tldr`?
 
@@ -49,5 +40,3 @@ Here's an example of what that might look like:
 ## More information
 
 If you have further interest in this, please visit [https://tldr.sh/](https://tldr.sh/)
-
-export default ({ children }) => <Post>{children}</Post>;

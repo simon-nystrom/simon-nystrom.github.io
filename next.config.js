@@ -1,9 +1,16 @@
 /** @type {import('next').NextConfig} */
 
+const remarkFrontmatter = import("remark-frontmatter");
+const { remarkMdxFrontmatter } = import("remark-mdx-frontmatter");
+
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [],
+    remarkPlugins: [
+      require("remark-prism"),
+      remarkFrontmatter,
+      remarkMdxFrontmatter,
+    ],
     rehypePlugins: [],
   },
 });

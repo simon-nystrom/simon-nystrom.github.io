@@ -4,7 +4,7 @@ const seriesInfoMap: { [key: string]: string } = {
 };
 
 const SeriesInfo = ({ series }: { series: string }) => (
-  <div className="border-orange-400 border-l-4 pl-2 text-sm py-2 mb-6">
+  <div className="border-orange-400 border-l-4 pl-2 text-sm py-2 mb-6 max-w-screen-md mx-auto">
     {seriesInfoMap[series]}
   </div>
 );

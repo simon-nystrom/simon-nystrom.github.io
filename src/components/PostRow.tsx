@@ -1,14 +1,13 @@
 import Link from "next/link";
-import Headers from "./blog/Headers";
 import Tag from "./blog/Tag";
 import { PostMeta } from "./PostList";
 
 const PostRow = ({ post }: { post: PostMeta }) => (
   <Link passHref href={`/posts/${post.slug}`}>
-    <div className="flex flex-col md:flex-row justify-between border px-3 py-2 rounded-md border-opacity-20 border-orange-400 transition-all hover:border-opacity-100 duration-150">
-      <h2 className="text-2xl">{post.title}</h2>
-      <div className="flex flex-row md:flex-col justify-end  items-end md:justify-center gap-2">
-        <p className="text-sm mt-2 text-gray-400">{post.date}</p>
+    <div className="mb-6 flex flex-col md:flex-row px-3 py-1 border-orange-400 transition-all hover:border-opacity-100 duration-150 border-l-2 border-opacity-50 cursor-default hover:pl-4 justify-between md:items-center">
+      <h2 className="text-2xl mr-4 mb-2">{post.title}</h2>
+      <div className="flex flex-row md:flex-col justify-end items-end md:justify-center gap-3 mb-2">
+        <p className="text-sm text-gray-400">{post.date}</p>
         <div className="flex-row items-end gap-2 hidden sm:flex">
           <Tag idx={0} text={post.series}></Tag>
           {post.tags.map((tag, i) => (
