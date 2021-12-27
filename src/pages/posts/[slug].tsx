@@ -14,7 +14,7 @@ import PostInfo from "../../components/blog/PostInfo";
 import Pre from "../../components/blog/Pre";
 import SeriesInfo from "../../components/blog/SeriesInfo";
 import UL from "../../components/blog/UL";
-import { getPosts1 } from "../../utils/posts";
+import getPosts from "../../utils/posts";
 
 const components = {
   h1: Headers.H1,
@@ -43,9 +43,6 @@ const Post = (props: Props) => (
     ></MDXRemote>
   </div>
 );
-{
-  /* <main className="mx-auto max-w-screen-md pb-20 mb-8"></main> */
-}
 
 type Props = {
   source: MDXRemoteSerializeResult;
@@ -55,7 +52,7 @@ type Props = {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const posts = await getPosts1();
+  const posts = await getPosts();
 
   console.log(posts);
 
@@ -75,7 +72,9 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getPosts1();
+  const posts = await getPosts();
+
+  console.log(posts[0]);
 
   return {
     paths: posts.map((post) => ({

@@ -6,8 +6,8 @@ type Props = {
 };
 
 const Img = (props: Props) => (
-  <span className="relative block w-full my-4">
-    <img {...props} alt={props.alt}></img>
+  <span className="relative block w-full my-4 mx-auto">
+    <img className="mx-auto" {...props} alt={props.alt}></img>
   </span>
 );
 

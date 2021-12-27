@@ -5,6 +5,6 @@ RUN apk add --no-cache jq
 
 RUN pip install proselint
 
-COPY ./src/pages/posts /posts
+COPY ./posts /posts
 
 CMD proselint --json /posts/* | jq '.data.errors[] | select(.check != "typography.symbols.curly_quotes")'
