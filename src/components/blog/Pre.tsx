@@ -7,7 +7,7 @@ type Props = {
 
 const Pre = ({ children, ...props }: Props) => {
   return (
-    <pre className={classNames("mx-auto block", props.className)}>
+    <pre className={classNames("mx-auto block my-8", props.className)}>
       {children}
     </pre>
   );
