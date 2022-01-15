@@ -54,8 +54,6 @@ type Props = {
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const posts = await getPosts();
 
-  console.log(posts);
-
   const post = posts.find((p) => p.data.slug == params?.slug)!;
 
   const source = await serialize(post?.content, {
@@ -73,8 +71,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await getPosts();
-
-  console.log(posts[0]);
 
   return {
     paths: posts.map((post) => ({

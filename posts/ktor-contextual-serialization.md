@@ -10,7 +10,7 @@ slug: "ktor-contextual-serialization"
 
 Ktor is a Kotlin framework for building web applications and HTTP services.
 
-This blog post will focus on an issue I ran into recently in regards to JSON serialization when using Ktor (adding contextual serialization).
+This blog post will focus on an issue I ran into recently concerning to JSON serialization when using Ktor (adding contextual serialization).
 
 If you're into Kotlin and you haven't tried Ktor yet, I highly suggest you try it out. You can read more about Ktor [here](https://ktor.io/docs/welcome.html).
 
