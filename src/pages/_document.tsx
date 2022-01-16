@@ -5,6 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+import Link from "next/link";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -19,6 +20,18 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Link passHref href="/privacy_policy">
+            <a
+              style={{
+                position: "fixed",
+                bottom: 0,
+                fontSize: 10,
+                padding: 4,
+              }}
+            >
+              Privacy Policy
+            </a>
+          </Link>
         </body>
       </Html>
     );

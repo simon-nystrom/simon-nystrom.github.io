@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Nav from "../components/Nav";
 import Head from "next/head";
+import Script from "next/script";
 
 function NewcurrentApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,19 @@ function NewcurrentApp({ Component, pageProps }: AppProps) {
       </Head>
       <Nav></Nav>
       <Component {...pageProps} />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-DBYBSY30B8"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-DBYBSY30B8');
+        `}
+      </Script>
     </div>
   );
 }
