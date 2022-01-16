@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import Script from "next/script";
 import remarkFrontmatter from "remark-frontmatter";
 import { remarkMdxFrontmatter } from "remark-mdx-frontmatter";
 import A from "../../components/blog/A";

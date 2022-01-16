@@ -15,13 +15,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
