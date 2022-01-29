@@ -172,4 +172,12 @@ Running `Storybook` and visiting http://localhost:6006 will show that, indeed, o
 
 ---
 
+## Troubleshooting
+
+If you can't get it to run, or have some other concerns, check it out from my repo and see if that works:
+
+https://github.com/simon-nystrom/newcurrent-react-ui/tree/loading-spinner
+
+---
+
 Stay tuned for the next entry in the series 😊. What component would you like to see next?

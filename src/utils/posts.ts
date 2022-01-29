@@ -8,8 +8,8 @@ export const getPosts = async () => {
   );
   return files.sort(
     (a, b) =>
-      (new Date(a.data.date) < new Date(b.data.date)) -
-      (new Date(a.data.date) > new Date(b.data.date))
+      +(new Date(a.data.date) < new Date(b.data.date)) -
+      +(new Date(a.data.date) > new Date(b.data.date))
   );
 };
 
