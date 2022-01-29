@@ -1,6 +1,8 @@
 const seriesInfoMap: { [key: string]: string } = {
   "command line tool monthly":
     "Command line tool monthly is a series where I write monthly about a useful command line tool that I like.",
+  "UI Kit with React, TypeScript, Storybook and Tailwind":
+    "UI Kit with React, TypeScript, Storybook and Tailwind is a series where I aim to improve my skills in React, TypeScript, Storybook and Tailwindcss by building my own UI kit from scratch.",
 };
 
 const SeriesInfo = ({ series }: { series: string }) => {

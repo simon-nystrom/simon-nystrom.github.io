@@ -6,7 +6,11 @@ export const getPosts = async () => {
   const files = postsDir.map((file) =>
     matter(fs.readFileSync(`posts/${file}`, "utf-8"))
   );
-  return files;
+  return files.sort(
+    (a, b) =>
+      (new Date(a.data.date) < new Date(b.data.date)) -
+      (new Date(a.data.date) > new Date(b.data.date))
+  );
 };
 
 export default getPosts;

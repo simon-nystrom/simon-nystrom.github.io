@@ -1,7 +1,7 @@
 ---
 title: "Adding contextual serialization in Ktor"
 author: "Simon Nyström"
-date: "2021-01-15"
+date: "2022-01-15"
 tags: ["kotlin", "ktor"]
 slug: "ktor-contextual-serialization"
 ---

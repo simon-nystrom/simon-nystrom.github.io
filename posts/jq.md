@@ -2,7 +2,7 @@
 title: "jq: Querying JSON"
 author: "Simon Nyström"
 series: "command line tool monthly"
-date: "2021-01-16"
+date: "2022-01-16"
 tags: ["terminal", "json"]
 slug: "jq"
 ---

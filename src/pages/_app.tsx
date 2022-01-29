@@ -3,6 +3,9 @@ import type { AppProps } from "next/app";
 import Nav from "../components/Nav";
 import Head from "next/head";
 import Script from "next/script";
+import Link from "next/link";
+import LinkedInIcon from "../components/icons/LinkedInIcon";
+import EmailIcon from "../components/icons/EmailIcon";
 
 function NewcurrentApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,6 +19,24 @@ function NewcurrentApp({ Component, pageProps }: AppProps) {
       </Head>
       <Nav></Nav>
       <Component {...pageProps} />
+      <div className="mx-auto max-w-screen-md flex text-gray-300 items-center gap-4 justify-center">
+        <Link
+          passHref
+          href={"https://www.linkedin.com/in/simon-nystr%C3%B6m-192b12a5/"}
+        >
+          <a
+            target={"_blank"}
+            className="w-6 hover:text-orange-400 duration-150 transition-colors"
+          >
+            <LinkedInIcon></LinkedInIcon>
+          </a>
+        </Link>
+        <Link passHref href={"mailto:simon.nystrom90@gmail.com"}>
+          <a className="w-8 hover:text-orange-400 duration-150 transition-colors">
+            <EmailIcon></EmailIcon>
+          </a>
+        </Link>
+      </div>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-DBYBSY30B8"
         strategy="afterInteractive"
