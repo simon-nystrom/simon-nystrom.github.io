@@ -17,7 +17,7 @@ In this series I aim to implement a basic text field and integrate it with `Stor
 
 ## The text field
 
-Let's start off by creating what's necessary for the text field. I want my text field to support the very basics of a simple text-input field. It should support being `disabled`, having a `placeholder` and so on. On top of that I want it to integrate with `react-hook-form` as that is one of my favorite form libraries for `React`.
+Let's start off by creating what's necessary for the text field. I want my text field to support the basics of a simple text-input field. It should support being `disabled`, having a `placeholder` and so on. On top of that I want it to integrate with `react-hook-form` as that is one of my favorite form libraries for `React`.
 
 In the end, I want it to look like this:
 
@@ -62,7 +62,7 @@ const TextField = ({
 export default TextField;
 ```
 
-Now we have the very basics, but it doesn't look very good and it doesn't really do anything at all for now. It's basically just a completely blank field with no border, no label etc.
+Now we have the basics, but it doesn't look good and it doesn't really do anything at all for now. It's basically just a completely blank field with no border, no label etc.
 
 ### Adding the label
 
@@ -245,7 +245,7 @@ export const Basic = Template.bind({});
 Basic.args = { label: "Name", placeholder: "Enter name" };
 ```
 
-That's all we need to show of the very basics of what the text field can do, and since we've integrated it with `Storybook` now we can test it interactively and change props as we wish, such as toggling its disabled status and so on. Illustrated with an image below:
+That's all we need to show of the basics of what the text field can do, and since we've integrated it with `Storybook` now we can test it interactively and change props as we wish, such as toggling its disabled status and so on. Illustrated with an image below:
 
 ![text-field-disabled](/images/text-field-disabled.png)
 
