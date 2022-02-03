@@ -1,7 +1,7 @@
 ---
 title: "Building a Text Field"
 author: "Simon Nyström"
-date: "2022-01-30"
+date: "2022-02-03"
 tags: ["react", "storybook", "tailwind"]
 slug: "text-field"
 series: "UI Kit with React, TypeScript, Storybook and Tailwind"
@@ -21,7 +21,7 @@ Let's start off by creating what's necessary for the text field. I want my text 
 
 In the end, I want it to look like this:
 
-![text-field-complete](/images/text-field.png)
+![text-field-complete](https://newcurrent.se/images/text-field.png)
 
 In the project, create the files:
 
@@ -247,7 +247,7 @@ Basic.args = { label: "Name", placeholder: "Enter name" };
 
 That's all we need to show of the basics of what the text field can do, and since we've integrated it with `Storybook` now we can test it interactively and change props as we wish, such as toggling its disabled status and so on. Illustrated with an image below:
 
-![text-field-disabled](/images/text-field-disabled.png)
+![text-field-disabled](https://newcurrent.se/images/text-field-disabled.png)
 
 Let's also add a more advanced story where we actually use the `react-hook-form` integration, in the same file, add the following:
 
@@ -302,7 +302,7 @@ For specifics on `react-hook-form`, I placed a link to it earlier in the post wh
 
 The resulting story looks like this in `Storybook`:
 
-![text-field-error](/images/text-field-error.png)
+![text-field-error](https://newcurrent.se/images/text-field-error.png)
 
 ---
 
