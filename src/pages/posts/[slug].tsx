@@ -1,7 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import Script from "next/script";
 import remarkFrontmatter from "remark-frontmatter";
 import { remarkMdxFrontmatter } from "remark-mdx-frontmatter";
 import A from "../../components/blog/A";
@@ -10,6 +9,7 @@ import Divider from "../../components/blog/Divider";
 import Headers from "../../components/blog/Headers";
 import Img from "../../components/blog/Img";
 import InlineCode from "../../components/blog/InlineCode";
+import Li from "../../components/blog/Li";
 import Paragraph from "../../components/blog/Paragraph";
 import PostInfo from "../../components/blog/PostInfo";
 import Pre from "../../components/blog/Pre";
@@ -20,9 +20,11 @@ import getPosts from "../../utils/posts";
 const components = {
   h1: Headers.H1,
   h2: Headers.H2,
+  h3: Headers.H3,
   p: Paragraph,
   inlineCode: InlineCode,
   ul: UL,
+  li: Li,
   img: Img,
   a: A,
   hr: Divider,
