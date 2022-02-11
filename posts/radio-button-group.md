@@ -15,7 +15,7 @@ In this series I aim to implement a basic radio button group and integrate it wi
 
 ---
 
-## The Checkbox
+## The `RadioButton`
 
 Let's start off by creating what's necessary for the radio button group. I want it to support being `disabled`, support focus for keyboard accessibility, and have visible transitions between states. On top of that I want it to integrate with `react-hook-form` as that is one of my favorite form libraries for `React`.
 
@@ -363,7 +363,7 @@ Run `Storybook`, visit http://localhost:6006 and you'll find the `RadioButtonGro
 
 The `InForm` story should look something like this:
 
-![radio-button-group](/images/radiobutton.png)
+![radio-button-group](https://newcurrent.se/images/radiobutton.png)
 
 ---
 
