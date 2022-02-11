@@ -20,10 +20,7 @@ function NewcurrentApp({ Component, pageProps }: AppProps) {
       </Head>
       <Nav></Nav>
       <Component {...pageProps} />
-      <div
-        className="flex left-1/2 bottom-4 text-gray-300 items-center gap-4 justify-center fixed"
-        style={{ marginLeft: "-66px" }}
-      >
+      <div className="mx-auto max-w-screen-md flex text-gray-300 items-center gap-4 justify-center">
         <Link passHref href={"https://github.com/simon-nystrom"}>
           <a
             target={"_blank"}
