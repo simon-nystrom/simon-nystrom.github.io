@@ -11,7 +11,7 @@ series: "UI Kit with React, TypeScript, Storybook and Tailwind"
 
 This is part of the `UI Kit with React, TypeScript, Storybook and Tailwind`, make sure you've checked out the previous entries in the series if you find anything confusing 😊.
 
-In this series I aim to implement a basic text field and integrate it with `Storybook`.
+In this series I aim to implement a basic checkbox and integrate it with `Storybook`.
 
 ---
 
@@ -21,7 +21,7 @@ Let's start off by creating what's necessary for the checkbox. I want my text fi
 
 In the end, I want it to look like this:
 
-![checkbox-complete](/images/checkboxes.png)
+![checkbox-complete](https://newcurrent.se/images/checkboxes.png)
 
 In the project, create the files:
 
@@ -31,7 +31,7 @@ In the project, create the files:
 First, we'll create the necessary structure for the `Checkbox`:
 
 ```typescript
-// TextField.tsx
+// Checkbox.tsx
 
 import { Control, FieldValues, Path } from "react-hook-form";
 
@@ -184,7 +184,7 @@ Note that the regular input field is now `hidden` (by saying `opacity-0` it is f
 
 At this point the checkbox looks like this:
 
-![checkbox-p1](/images/checkbox-p1.png)
+![checkbox-p1](https://newcurrent.se/images/checkbox-p1.png)
 
 That's a bit problematic, it's currently stuck looking like it's checked.
 

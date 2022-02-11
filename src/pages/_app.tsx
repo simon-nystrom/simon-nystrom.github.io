@@ -6,6 +6,7 @@ import Script from "next/script";
 import Link from "next/link";
 import LinkedInIcon from "../components/icons/LinkedInIcon";
 import EmailIcon from "../components/icons/EmailIcon";
+import GitHubIcon from "../components/icons/GitHubIcon";
 
 function NewcurrentApp({ Component, pageProps }: AppProps) {
   return (
@@ -19,7 +20,18 @@ function NewcurrentApp({ Component, pageProps }: AppProps) {
       </Head>
       <Nav></Nav>
       <Component {...pageProps} />
-      <div className="mx-auto max-w-screen-md flex text-gray-300 items-center gap-4 justify-center">
+      <div
+        className="flex left-1/2 bottom-4 text-gray-300 items-center gap-4 justify-center fixed"
+        style={{ marginLeft: "-66px" }}
+      >
+        <Link passHref href={"https://github.com/simon-nystrom"}>
+          <a
+            target={"_blank"}
+            className="w-6 hover:text-orange-400 duration-150 transition-colors"
+          >
+            <GitHubIcon></GitHubIcon>
+          </a>
+        </Link>
         <Link
           passHref
           href={"https://www.linkedin.com/in/simon-nystr%C3%B6m-192b12a5/"}

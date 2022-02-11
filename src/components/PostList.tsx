@@ -16,12 +16,14 @@ type Props = {
 };
 
 const PostList = ({ posts }: Props) => (
-  <div className="mx-auto max-w-screen-md pb-20">
+  <div className="mx-auto max-w-screen-md">
     <Headers.H1>Posts</Headers.H1>
     <div className="my-12"></div>
-    {posts.map((post) => (
-      <PostRow key={post.title} post={post}></PostRow>
-    ))}
+    <div style={{ maxHeight: "75vh", overflowY: "scroll" }}>
+      {posts.map((post) => (
+        <PostRow key={post.title} post={post}></PostRow>
+      ))}
+    </div>
   </div>
 );
 
