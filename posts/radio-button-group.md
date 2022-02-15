@@ -1,5 +1,5 @@
 ---
-title: "Building a Radio Button Group"
+title: "Building a Radio Button"
 author: "Simon Nyström"
 date: "2022-02-11"
 tags: ["react", "storybook", "tailwind"]
